@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+
+<center style="padding: 12px"><h2>Chain List</h2></center>
+<div class="center">
+  {% for chain in chain_list %}
+  <a style="background-color: aliceblue;     padding: 0px" href="{% url 'chain_detail' chain.id %}">
+    <div class="card">
+
+          <h2>  Chain: {{ chain.name }}</h2>
+          <h4>Chain No. {{ chain.number }}</h4>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+{% endblock %}

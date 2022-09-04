@@ -1,0 +1,63 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1.6rem;
+    background-color: #6fadd7;
+}
+
+main {
+    flex: 1 0 auto;
+    width: 90%;
+    margin: 0rem 2rem;
+}
+
+footer.page-footer {
+    padding: .5rem;
+    text-align: right;
+    background-color: rgb(170, 226, 207);
+}
+
+.header {
+    overflow: hidden;
+    background-color: rgb(170, 226, 207);
+    padding: 3rem 1rem;
+}
+
+.card {
+    display: grid;
+    transition: 0.3s;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(101, 167, 242, 0.903);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgb(8, 28, 57)
+}
+
+.card:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+a:link, a:visited {
+    background-color: #fa8c84;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: rgb(236, 161, 161);
+  }
+

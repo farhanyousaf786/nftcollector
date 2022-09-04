@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>NFT List</h1>
+
+{% for nft in nfts %}
+<a href="{% url 'detail' nft.id %}">
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ nft.name }}</span>
+      <p>Description: {{ nft.description }}</p>
+      <p>Price: {{ nft.price }}</p>
+      <p>Type: {{ nft.type }}</p>
+    </div>
+  </a>
+  </div>
+{% endfor %}
+
+{% endblock %}

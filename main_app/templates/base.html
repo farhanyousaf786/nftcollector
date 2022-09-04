@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add NFT</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <style>
+body{
+  background-color: #e8f6ff;
+
+
+}
+  a:link, a:visited {
+    background-color: #a0423b;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+  }
+
+
+ </style>
+</head>
+<body>
+  <header class="navbar-fixed">
+  
+    <table style="width:100%">
+      <tr>
+        <th><a href="/" class="left brand-logo">HOME</a></th>
+        <th><a href="{% url 'chain_create' %}">Add Chain</a></th>
+        <th><a href="{% url 'chain_index' %}">View All</a></th>
+        <th><a href="/allCollection">All COLLECTION</a></th>
+        <th><a href="{% url 'nft_create' %}">Add NFT</a></th>
+        <th><a href="/about">ABOUT</a></th>
+      </tr>
+    
+    </table>
+  </header>
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
+  <footer class="page-footer">
+    <div class="right">All Rights Reserved, &copy; 2022 NFT Collector &nbsp;</div>
+  </footer>
+</body>
+</html>
