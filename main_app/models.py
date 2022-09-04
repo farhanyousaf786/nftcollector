@@ -31,7 +31,7 @@ class Nft(models.Model):
     description = models.TextField(max_length=500)
     price = models.IntegerField()
     type = models.TextField()
-    chain = models.ManyToManyField()
+    chain = models.ManyToManyField(Chain)
 
     def get_absolute_url(self):
       return reverse('detail', kwargs={'nft_id': self.id})
