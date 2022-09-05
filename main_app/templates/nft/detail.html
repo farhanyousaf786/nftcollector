@@ -43,7 +43,24 @@
       </table>
 
     </div>
-  </div>
+    <hr>
+    <div class="row">
+      <div class="col s6">
+        <h3>{{ nfts.name }}'s Nft</h3>
+        {% if nfts.chain.count %}
+          {% for chain in nfts.chain.all %}
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">
+                  A <span>{{ chain.name }}</span> {{ chain.number }}
+                </span>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <h5>No Chain. Must be in a box.</h5>
+        {% endif %}
+      </div>
 
 <script>
 
